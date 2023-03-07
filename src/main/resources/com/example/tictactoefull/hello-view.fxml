@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoefull.HelloController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="122.0" prefWidth="520.0" text="Tic Tac Toe Game" textAlignment="CENTER" textFill="#0d0d0d">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="538.0" text="Choose Board Size" textAlignment="CENTER">
+            <font>
+                <Font name="Verdana" size="18.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="boardSize" onMouseClicked="#onHelloButtonClick" prefWidth="150.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ChoiceBox>
+      <Label text="Choose opponent">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="opponent" prefWidth="150.0" />
+        <Label text="Rules:">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label text="Basic version 3x3">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" prefHeight="175.0" prefWidth="481.0" text="The game is played on a grid that's 3 squares by 3 squares.You are X, your friend is O. Players take turns putting their marks in empty squares.The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.When all 9 squares are full, the game is over." textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label text="Extended version 10 x 10">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" prefHeight="170.0" prefWidth="481.0" text="The game is played on a grid that's 10 squares by 10 squares.You are X, your friend is O. Players take turns putting their marks in empty squares.The first player to get 5 of her marks in a row (up, down, across, or diagonally) is the winner.When all 100 squares are full, the game is over." textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="confrimButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#createBoard" text="Confirm" textAlignment="CENTER" />
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</VBox>
