@@ -45,8 +45,9 @@ public class Board implements EventHandler {
             }
             player--;
         }
-        //Zapisanie ruchu na tablicy
-        board[(GridPane.getColumnIndex(((Button) event.getSource())) != null ? GridPane.getColumnIndex(((Button) event.getSource())) : 0)][(GridPane.getRowIndex(((Button) event.getSource()))) != null ? (GridPane.getRowIndex(((Button) event.getSource()))) : 0] = ((Button) event.getSource()).getText();
+        int gridColumn = (GridPane.getColumnIndex(((Button) event.getSource())) != null ? GridPane.getColumnIndex(((Button) event.getSource())): 0);
+        int gridRow = (GridPane.getRowIndex(((Button) event.getSource())) != null ? (GridPane.getRowIndex(((Button) event.getSource()))) : 0);
+        board[gridColumn][gridRow] = ((Button) event.getSource()).getText();
         moveCounter++;
         deactivateButtons();
         isFull();
@@ -54,16 +55,7 @@ public class Board implements EventHandler {
         winInColumn();
         winFirDia();
         winSecDia();
-
-        //kontrola tablicy w konsoli
-   /*     System.out.println(winnerMoves);
-        for (int j = 0; j < boardDim; j++) {
-            for (int i = 0; i < boardDim; i++) {
-                System.out.print(board[i][j] + " ");
-            }
-            System.out.println();
-        }
-   */ }
+    }
         public void deactivateButtons() {
         if (isWinner) {
             for (int i = 0; i < boardDim; i++) {
